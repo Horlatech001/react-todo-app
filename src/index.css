@@ -12,12 +12,12 @@ body {
 }
 .todo-container {
   background-color: seagreen;
-  height: 350px;
+  /* height: 350px; */
   width: 350px;
   margin: auto;
   padding: 0.9em;
 }
-.head-section form{
+.head-section form {
   height: 50px;
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@ hr {
 ul {
   list-style: none;
   height: 42vh;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
 ul li {
   padding: 0.2em;
@@ -79,6 +79,12 @@ ul li {
   display: flex;
   justify-content: space-between;
   color: black;
+  width: 100%;
+  max-width: 95%;
+}
+ul li label {
+  width: 100%;
+  max-width: 80%;
 }
 li button {
   padding: 0.2em 0.5em;

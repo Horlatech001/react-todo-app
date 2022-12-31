@@ -10,12 +10,9 @@ const Todo = ({ todo, onDelete, onToggle }) => {
         </span>
       </label>
       <span>
-        <Button text="Edit" color="grey" right="3px" />
-        <button>
-          <FaTimes
-            style={{ fontSize: "10px" }}
-            onClick={() => onDelete(todo.id)}
-          />
+        <Button text="Edit" color="green" right="3px" />
+        <button onClick={() => onDelete(todo.id)}>
+          <FaTimes style={{ fontSize: "10px" }} />
         </button>
       </span>
     </li>

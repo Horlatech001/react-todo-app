@@ -10,7 +10,6 @@ function App() {
     const id = Math.floor(Math.random() * 1000) + 1;
     const newTodo = { id, ...todo };
     setTodos([...todos, newTodo]);
-    console.log(todo);
   };
 
   // Delete Todo
@@ -27,11 +26,18 @@ function App() {
     );
   };
 
+  // Show todo Num
+  const showTodoNum = () => todos.length;
+
   return (
     <div className="todo-container">
-      <Header onAdd={addTodo} />
+      <Header onAdd={addTodo} onShow={showTodoNum} />
       {todos.length > 0 ? (
-        <Todos todos={todos} onDelete={deleteTodo} onToggle={toggleTodo} />
+        <Todos
+          todos={todos}
+          onDelete={deleteTodo}
+          onToggle={toggleTodo}
+        />
       ) : (
         "No todos to show!"
       )}

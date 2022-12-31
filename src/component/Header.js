@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { useState } from "react";
 
-const Header = ({onAdd}) => {
+const Header = ({onAdd, onShow}) => {
   const [content, setContent] = useState("");
   const [isCompleted, setIsCompleted] = useState(false);
 
@@ -32,7 +32,7 @@ const Header = ({onAdd}) => {
       </div>
       <div className="task-bg">
         <h1>My task</h1>
-        <p id="counter">0</p>
+        <p id="counter">{onShow()}</p>
       </div>
       <hr />
     </>

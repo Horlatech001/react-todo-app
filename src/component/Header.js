@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { useState } from "react";
 
-const Header = ({onAdd, onShow}) => {
+const Header = ({ onAdd, onShow }) => {
   const [content, setContent] = useState("");
   const [isCompleted, setIsCompleted] = useState(false);
 
@@ -15,7 +15,7 @@ const Header = ({onAdd, onShow}) => {
       setIsCompleted(false);
     }
   };
-  
+
   return (
     <>
       <div className="head-section">
@@ -23,11 +23,11 @@ const Header = ({onAdd, onShow}) => {
           <input
             type="text"
             id="text-container"
-            placeholder="Enter a text"
+            placeholder="Enter a todo"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
-          <Button text="Add Todos"  />
+          <Button text="Add" />
         </form>
       </div>
       <div className="task-bg">

@@ -3,23 +3,7 @@ import Header from "./component/Header";
 import Todos from "./component/Todos";
 import { useState } from "react";
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      content: "Go to hub",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      content: "Learn Javascript",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      content: "Go to school",
-      isCompleted: false,
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   // Add Todo
   const addTodo = (todo) => {
